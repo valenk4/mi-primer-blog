@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+    <title>{{ pintor.nombre }}</title>
+    <link rel="stylesheet" href="{% static 'blog/archivo2.css' %}">
+</head>
+<body>
+    <h1>{{ pintor.nombre }}</h1>
+    <img src="{{ pintor.imagen.url }}">
+    <p><h2>Informacion personal</h2> {{ pintor.biografia }}</p>
+    <p><h2>Nacionalidad</h2> {{ pintor.nacionalidad}}</p>
+    <p><h2>Periodo de actividad</h2> {{ pintor.tiempo_activo}} años</p>
+    <p><h2>Cantidad de obras elaboradas a lo largo del tiempo</h2>{{ pintor.cantidad_de_obras}} obras</p>
+    <p><h2>Obra más famosa o destacada</h2>{{ pintor.obra_destacada}}</p>
+    <img src="{{pintor.imagen2.url }}">
+    <p>{{ pintor.informacion_adicional}}</p>
+    <p><h2>Tecnica empleada en sus obras</h2>{{ pintor.tecnica_utilizada}}</p>
+    <p><h2>Movimiento o corriente artistica que ha seguido</h2>{{ pintor.movimiento}}</p>
+    <p>{{ pintor.acerca_del_movimiento}}</p>
+    <p><h2>Paleta de colores más utilizada</h2>Colores {{ pintor.paleta_utilizada}}</p>
+    <img src="{{pintor.imagen3.url }}">
+    <p><a href="{% url 'artistas' %}">Volver a la pagina principal</a></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@font-face 
+{
+  font-family: 'f';
+  src: url('/static/fonts/f.ttf') format('opentype');
+}
+h1
+{
+    font-family: f;
+    color: #EAE0C8;
+    text-align: center;
+}
+body 
+{
+    background-color: #0F1A2B;
+    font-family:'Arial Narrow';
+    color: #EAE0C8;
+}
+.titulo
+{
+    background-color: #2f4156;
+    padding: 20px; 
+}
+.contenido
+{
+    background-color: #2f4156;
+    padding: 20px; 
+}

@@ -1,0 +1,24 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Blog de Valen</title>
+        <link rel="stylesheet" href="{% static 'blog/archivo.css' %}">
+    </head>
+    <body>
+        <div class = "titulo">
+            <h1>Pintores mediante la historia</h1>
+            <hr>
+        </div>
+        {% for Pintor in pintores %}
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 20px;"></div>
+        <div class = "contenido">
+        <p> autor: {{ Pintor.autor}}</p>
+        <p> publicado: {{ Pintor.fecha_publicacion }}</p>
+        <h2><a href="{% url 'detalle_pintor' Pintor.pk %}">{{ Pintor.nombre }}</a></h2>
+        <p>{{ Pintor.biografia|linebreaksbr }}</p>
+        <hr>
+        </div>
+        {% endfor %}
+    </body>
+</html>
